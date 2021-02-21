@@ -15,7 +15,9 @@
   --fw-400: 400;
   --fw-600: 600;
 
-  --clr-white: #fbfcfe;
+  --clr-white-100: #fbfcfe;
+  --clr-white-200: #edf3f8;
+
   --clr-blue-100: #6c8294;
   --clr-blue-200: #36536b;
   --clr-blue-300: #1b262f;
@@ -65,10 +67,11 @@ img {
 }
 
 body {
-  line-height: 1.5;
+  background-color: var(--clr-white-200);
+  color: var(--clr-blue-100);
+  line-height: 1.8;
   font-family: var(--ff-sans);
   font-size: var(--fs-200);
-  line-height: 1.5;
 }
 
 /* Typography */
@@ -78,9 +81,10 @@ body {
   font-family: var(--ff-serif);
 }
 
-h2 {
+.secondary__title {
   font-family: var(--ff-serif);
   font-size: var(--fs-500);
+  color: var(--clr-blue-200);
 }
 
 h3 {
@@ -98,8 +102,8 @@ a {
 }
 
 /* Utility Class */
-
 .container {
+  max-width: 1110px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -113,28 +117,77 @@ a {
   text-align: center;
 }
 
+.flow-content > * + * {
+  margin-top: 2rem;
+}
+
+.bg-dark {
+  background-color: var(--clr-blue-300);
+  color: var(--clr-white-100);
+}
+
 /* Component */
 .btn {
   cursor: pointer;
-  background-color: var(--clr-primary-200);
-  color: var(--clr-neutral-100);
+  font-size: var(--fs-200);
+  background-color: var(--clr-pink-200);
+  color: var(--clr-white-100);
   padding: 0.8rem;
   border-radius: 2rem;
   outline: none;
   border: none;
 }
 
-.footer {
-  background-color: var(--clr-neutral-700);
-  color: var(--clr-neutral-100);
+.form__input {
+  padding: 1rem;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--clr-white-100);
 }
 
-.about {
-  background-color: var(--clr-neutral-700);
-  color: var(--clr-neutral-100);
-}
+/* General Lay-out */
 
+/* Banking */
 .banking img {
   width: 106px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .banking .split {
+    flex-direction: row;
+  }
+
+  .banking .flow-content {
+    margin: 0 auto;
+  }
+}
+
+/* CTA */
+.cta .form {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .cta .split {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Footer */
+.footer {
+  background-image: url(/starter-code/assets/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top 50px center -20px;
+}
+
+.footer__social.split {
+  flex-direction: row;
+}
+
+.footer__social > * + * {
+  margin-left: 1.5rem;
 }
