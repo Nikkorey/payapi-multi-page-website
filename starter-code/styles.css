@@ -176,12 +176,25 @@ a {
   }
 }
 
+/* Components */
 /* Footer */
 .footer {
   background-image: url(/starter-code/assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top 50px center -20px;
+  background-position: top 100px center;
+  padding: 2rem 0;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-gap: 1rem;
+}
+
+.footer__nav a {
+  font-weight: 600;
+  opacity: .7;
 }
 
 .footer__social.split {
@@ -191,3 +204,35 @@ a {
 .footer__social > * + * {
   margin-left: 1.5rem;
 }
+
+@media (min-width: 768px) {
+  .footer__grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  .footer__nav.split {
+   flex-direction: row;
+  }
+
+  .footer__nav > * + * {
+     margin: 0;
+     margin-left: 1rem;
+   }
+}
+@media (min-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: max-content max-content 1fr;
+    grid-gap: 5rem;
+  }
+  .footer__social {
+    justify-self: flex-end;
+  } 
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0;
+  } 
+}
+
