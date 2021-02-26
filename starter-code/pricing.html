@@ -11,7 +11,7 @@
     <title>Frontend Mentor | PayAPI Website Challenge</title>
   </head>
 
-  <body>
+  <body class="pricing">
     <header class="text-center">
       <div class="container">
         <nav class="nav">
@@ -35,59 +35,61 @@
         </nav>
     </header>
 
-    <section class="pricing">
+    <section class="pricing__section text-center">
       <div class="container">
         <h2 class="secondary__title">Pricing</h2>
-        <article>
-          <h3>Free Plan</h3>
-          <p>Build and test using our core set of products with 
-            up to 100 API requests
-          </p>
-          <p>$0.00</p>
-          <ul>
-            <li>Transactions</li>
-            <li>Auth</li>
-            <li>Identity</li>
-            <li>Investments</li>
-            <li>Assets</li>
-            <li>Liabilities</li>
-            <li>Income</li>
-          </ul>
-          <a href="#" class="btn">Request Access</a>
-        </article>
-        <article>
-          <h3>Basic Plan</h3>
-          <p>Launch your project with unlimited requests and no contractual minimums.
-          </p>
-          <p>$249.00</p>
-          <ul>
-            <li>Transactions</li>
-            <li>Auth</li>
-            <li>Identity</li>
-            <li>Investments</li>
-            <li>Assets</li>
-            <li>Liabilities</li>
-            <li>Income</li>
-          </ul>
-          <a href="#" class="btn">Request Access</a>
-        </article>
-        <article>
-          <h3>Premium Plan</h3>
-          <p>Get tailored solutions, volume pricing, and dedicated 
-            support for your team.
-          </p>
-          <p>$499.00</p>
-          <ul>
-            <li>Transactions</li>
-            <li>Auth</li>
-            <li>Identity</li>
-            <li>Investments</li>
-            <li>Assets</li>
-            <li>Liabilities</li>
-            <li>Income</li>
-          </ul>
-          <a href="#" class="btn">Request Access</a>
-        </article>
+        <div class="split text-center">
+          <article>
+            <h4 class="text-pink">Free Plan</h4>
+            <p>Build and test using our core set of products with
+              up to 100 API requests
+            </p>
+            <p class="pricing__amount">$0.00</p>
+            <ul class="pricing__details">
+              <li>Transactions</li>
+              <li>Auth</li>
+              <li>Identity</li>
+              <li>Investments</li>
+              <li>Assets</li>
+              <li>Liabilities</li>
+              <li>Income</li>
+            </ul>
+            <a href="#" class="btn">Request Access</a>
+          </article>
+          <article>
+            <h4 class="text-pink">Basic Plan</h4>
+            <p>Launch your project with unlimited requests and no contractual minimums.
+            </p>
+            <p class="pricing__amount">$249.00</p>
+            <ul class="pricing__details">
+              <li>Transactions</li>
+              <li>Auth</li>
+              <li>Identity</li>
+              <li>Investments</li>
+              <li>Assets</li>
+              <li>Liabilities</li>
+              <li>Income</li>
+            </ul>
+            <a href="#" class="btn">Request Access</a>
+          </article>
+          <article>
+            <h4 class="text-pink">Premium Plan</h4>
+            <p>Get tailored solutions, volume pricing, and dedicated
+              support for your team.
+            </p>
+            <p class="pricing__amount">$499.00</p>
+            <ul class="pricing__details">
+              <li class="check">Transactions</li>
+              <li class="check">Auth</li>
+              <li class="check">Identity</li>
+              <li class="check">Investments</li>
+              <li class="check">Assets</li>
+              <li class="check">Liabilities</li>
+              <li class="check">Income</li>
+            </ul>
+            <a href="#" class="btn">Request Access</a>
+          </article>
+        </div>
       </div>
     </section>
     

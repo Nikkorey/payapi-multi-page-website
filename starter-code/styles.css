@@ -87,7 +87,7 @@ body {
   font-family: var(--ff-serif);
 }
 
-.heading__secondary{
+.heading__secondary {
   font-family: var(--ff-serif);
   font-size: var(--fs-600);
 }
@@ -106,6 +106,9 @@ body {
   color: var(--clr-white-100);
 }
 
+.text-pink {
+  color: var(--clr-pink-200);
+}
 
 a {
   display: inline-block;
@@ -122,12 +125,12 @@ a {
 @media (min-width: 1024px) {
   .container {
     padding: 0 3rem;
-  } 
+  }
 }
 @media (min-width: 1440px) {
   .container {
     padding: 0;
-  } 
+  }
 }
 
 .split {
@@ -151,7 +154,6 @@ a {
 .opaque {
   opacity: 0.7;
 }
-
 
 /* Components */
 /* Button */
@@ -198,7 +200,7 @@ a {
     right: 0;
   }
 }
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
   .cta .split {
     flex-direction: row;
     justify-content: space-between;
@@ -226,7 +228,7 @@ a {
 
 .footer__nav a {
   font-weight: 600;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .footer__social.split {
@@ -241,20 +243,20 @@ a {
   .footer {
     background-position: top right -280px;
   }
-  
+
   .footer__grid {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
   }
 
   .footer__nav.split {
-   flex-direction: row;
+    flex-direction: row;
   }
 
   .footer__nav > * + * {
-     margin: 0;
-     margin-left: 2rem;
-   }
+    margin: 0;
+    margin-left: 2rem;
+  }
 }
 @media (min-width: 1024px) {
   .footer__grid {
@@ -263,7 +265,7 @@ a {
   }
   .footer__social {
     justify-self: flex-end;
-  } 
+  }
 }
 
 /* General Lay-out */
@@ -285,7 +287,7 @@ a {
   margin-top: 3.375rem;
 }
 
-@media (min-width:  768px) {
+@media (min-width: 768px) {
   .work .grid {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -304,6 +306,7 @@ a {
   }
 }
 
+/* Easy */
 @media (min-width: 1024px) {
   .easy .split {
     flex-direction: row;
@@ -315,6 +318,21 @@ a {
   }
 }
 
+/* UI & UX */
+@media (min-width: 1024px) {
+  .simple .split {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .simple header {
+    text-align: left;
+  }
+
+  .simple img {
+    width: 566px;
+  }
+}
 
 /* Banking */
 .banking img {
@@ -329,5 +347,43 @@ a {
 
   .banking .flow-content {
     margin: 0 auto;
+  }
+}
+
+/* ---->>>> Pricing <<<<---- */
+
+.check::before {
+  content: url(./assets/shared/desktop/icon-check.svg);
+  margin-right: 1rem;
+}
+
+.check-none::before {
+  content: "";
+  margin-right: 1.8rem;
+}
+.pricing__details {
+  text-align: left;
+  max-width: 134px;
+  margin: 0 auto;
+}
+
+.pricing__amount {
+  font-size: 3.5rem;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .pricing__section .split {
+    flex-direction: row;
+  }
+  .pricing__section .split > * {
+    flex-basis: 100%;
+  }
+  .pricing__section .split > * + * {
+    margin-left: 1rem;
+  }
+
+  .pricing__amount {
+    font-size: 3rem;
   }
 }
