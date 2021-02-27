@@ -424,6 +424,11 @@ a {
   .about__business > * + * {
     margin: 0;
   }
+
+  .about-status .split {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -432,12 +437,33 @@ a {
     margin: 0;
   }
 
-  .about .container {
+  .about__intro .container {
     max-width: 920px;
     padding: 0;
   }
 
   .about .subtitle {
     width: 650px;
+  }
+}
+
+/* ---->>>> Contact <<<<---- */
+.join-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .join-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact .split {
+    flex-direction: row;
+    align-items: center;
   }
 }
