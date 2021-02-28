@@ -33,21 +33,66 @@
         </nav>
     </header>
 
-    <div class="container split">
+    <div class="container split text-center">
       <section>
         <h1 class="heading__primary">
           Submit a help request and we’ll get in touch shortly.
         </h1>
 
-        <form action="#">
-          <label for=""></label>
-          <input type="text">
+        <form action="#" class="contact__form">
+          <div>
+            <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            required
+            minlength="3"
+            maxlength="100"
+            />
+          </div>
+          
+          <div>
+            <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required
+            />
+          </div>
+
+          <div>
+            <input
+            type="text"
+            id="company"
+            placeholder="Company Name"
+            required
+            />
+          </div>
+
+          <div>
+            <input
+            type="text"
+            id="title"
+            placeholder="Title"
+            required
+            />
+          </div>
+
+          <textarea name="" id="" cols="30" rows="7" placeholder="Message"></textarea>
+
+          <input type="checkbox">
+          <label for="">Stay up-to-date with company 
+            announcements and updates to our API
+          </label>
+
+          <button type="submit" class="btn">Submit</button>
+
         </form>
       </section>
 
       <section class="join text-center">
         <div class="container">
-          <h4>
+          <h4 class="join__title">
             Join the thousands of innovators already building with us
           </h4>
           <ul class="join-list">
@@ -96,10 +141,10 @@
     <!-- Call to action -->
     <section class="cta text-center">
       <div class="container split">
-        <h2 class="secondary__title">Ready to start?</h2>
+        <h2 class="heading__secondary">Ready to start?</h2>
         <form action="" class="form split">
           <input class="form__input" type="text" placeholder="Enter email address">
-          <button type="submit" class="form__btn btn">Schedule Demo</button>
+          <button type="submit" class="form__btn btn btn__pink">Schedule Demo</button>
         </form>
       </div>
     </section>
