@@ -55,7 +55,6 @@ h5,
 h6 {
   line-height: 1;
   font-weight: var(--fw-600);
-  font-family: var(--ff-serif);
 }
 
 body,
@@ -85,15 +84,16 @@ img {
 }
 
 body {
-  background-color: var(--clr-white-200);
-  color: var(--clr-blue-100);
-  line-height: 1.8;
   font-family: var(--ff-sans);
   font-size: var(--fs-200);
+  line-height: 1.8;
+  background-color: var(--clr-white-200);
+  color: var(--clr-blue-100);
 }
 
 /* Typography */
 .heading__primary {
+  font-style: var(--ff-serif);
   font-size: var(--fs-500);
   color: var(--clr-blue-200);
 }
@@ -108,9 +108,10 @@ body {
 }
 
 .heading__tertiary {
-  font-size: var(--fs-400);
+  font-size: var(--fs-300);
   font-weight: var(--fw-600);
   color: var(--clr-blue-200);
+  font-style: var(--ff-sans);
 }
 
 .text-white {
@@ -172,6 +173,10 @@ a {
 
 .opaque {
   opacity: 0.7;
+}
+
+.space {
+  margin-top: 5rem;
 }
 
 /* Components */
@@ -371,6 +376,13 @@ a {
 }
 
 /* ---->>>> Pricing <<<<---- */
+
+.pricing__container {
+  margin-top: 3rem;
+}
+.pricing .article .desc {
+  display: none;
+}
 .check::before {
   content: url(./assets/shared/desktop/icon-check.svg);
   margin-right: 1rem;
@@ -384,21 +396,27 @@ a {
   text-align: left;
   max-width: 134px;
   margin: 0 auto;
+
 }
 
 .pricing__amount {
   font-size: 3.5rem;
   opacity: 1;
+  border-bottom: 1px solid;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-  .pricing__section .split {
+  .pricing__container {
+    margin-top: 4.375rem;
+  }
+  .pricing .split {
     flex-direction: row;
   }
-  .pricing__section .split > * {
+  .pricing .split > * {
     flex-basis: 100%;
   }
-  .pricing__section .split > * + * {
+  .pricing .split > * + * {
     margin-left: 1rem;
   }
 
