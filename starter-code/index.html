@@ -16,39 +16,46 @@
   </head>
 
   <body>
-    <header class="text-center">
+    <div class="container">
+      <nav class="nav">
+        <a href="#">
+          <img src="/starter-code/assets/shared/desktop/logo.svg" alt="payapi logo">
+        </a>
+
+        <button class="nav-menu">
+          <img class="menu" src="/starter-code/assets/shared/mobile/menu.svg" alt="menu">
+          <img class="close" src="/starter-code/assets/shared/mobile/close.svg" alt="close">
+        </button>
+
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="pricing.html">Pricing</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="about.html">About</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="contact.html">Contact</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="btn btn__pink">Schedule a Demo</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="home-intro text-center">
       <div class="container">
-        <nav class="nav">
-          <a href="#">
-            <img src="/starter-code/assets/shared/desktop/logo.svg" alt="">
-          </a>
-          <ul class="nav__list">
-            <li class="nav__list-item">
-              <a href="pricing.html">Pricing</a>
-            </li>
-            <li class="nav__list-item">
-              <a href="about.html">About</a>
-            </li>
-            <li class="nav__list-item">
-              <a href="contact.html">Contact</a>
-            </li>
-            <li class="nav__list-item">
-              <a href="#" class="btn btn__pink">Schedule a Demo</a>
-            </li>
-          </ul>
-        </nav>
-        <div>
-          <img src="./assets/home/desktop/illustration-phone-mockup.svg" 
-          alt="Phone">
-          <h1 class="heading__primary">Start building with our APIs for absolutely free.</h1>
-          <form action="" class="form split">
-            <input class="form__input" type="text" placeholder="Enter email address">
-            <button type="submit" class="form__btn btn">Schedule Demo</button>
-          </form>
-          <p>Have any questions? Contact Us</p>
-        </div>
+        <img src="./assets/home/desktop/illustration-phone-mockup.svg" 
+        alt="Phone">
+        <h1 class="heading__primary">Start building with our APIs for absolutely free.</h1>
+        <form action="" class="form split">
+          <input class="form__input" type="text" placeholder="Enter email address">
+          <button type="submit" class="btn">Schedule Demo</button>
+        </form>
+        <p>Have any questions? Contact Us</p>
       </div>
-    </header>
+    </section>
 
     <!-- work -->
     <section class="work text-center bg-dark">

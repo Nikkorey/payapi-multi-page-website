@@ -75,6 +75,7 @@ ul[class],
 ol[class] {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 img {
@@ -180,6 +181,55 @@ a {
 }
 
 /* Components */
+
+/* Navigation */
+.nav {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu {
+}
+.close {
+  display: none;
+}
+
+.nav__list {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #1b262f;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.nav__list > * + * {
+  margin-top: 2rem;
+}
+
+.nav__list-item:not(:last-child) {
+  color: var(--clr-white-100);
+  opacity: 0.7;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
 /* Button */
 .btn {
   cursor: pointer;
@@ -189,10 +239,10 @@ a {
   color: var(--clr-white-100);
   padding: 0.8rem 2rem;
   border-radius: 2rem;
-  border: 1px solid var(--clr-white-100);
 }
 .btn__pink {
   --bg-color: var(--clr-pink-200);
+  padding: 1rem 4.125rem;
 }
 
 /* Call to action */
@@ -294,6 +344,39 @@ a {
 }
 
 /* General Lay-out */
+
+.home-intro {
+  position: relative;
+}
+
+.home-intro::before {
+  content: "";
+  background-image: url("./assets/shared/desktop/bg-pattern-circle.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center 120%;
+  height: 70%;
+  top: -25%;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .home-intro::before {
+    background-position: center 110%;
+    right: -90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-intro::before {
+    background-position: center 110%;
+    height: 110%;
+    top: -25%;
+    right: -90%;
+  }
+}
+
 /* Work */
 .work {
   padding: 5rem 0;
@@ -396,7 +479,6 @@ a {
   text-align: left;
   max-width: 134px;
   margin: 0 auto;
-
 }
 
 .pricing__amount {
