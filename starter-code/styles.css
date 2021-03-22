@@ -54,7 +54,7 @@ h4,
 h5,
 h6 {
   line-height: 1;
-  font-weight: var(--fw-600);
+  font-weight: normal;
 }
 
 body,
@@ -94,7 +94,7 @@ body {
 
 /* Typography */
 .heading__primary {
-  font-style: var(--ff-serif);
+  font-family: var(--ff-serif);
   font-size: var(--fs-500);
   color: var(--clr-blue-200);
 }
@@ -138,6 +138,7 @@ a {
   max-width: 1110px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  outline: red solid 1px;
 }
 @media (min-width: 1024px) {
   .container {
@@ -239,52 +240,52 @@ a {
   color: var(--clr-white-100);
   padding: 0.8rem 2rem;
   border-radius: 2rem;
+  border: none;
 }
 .btn__pink {
   --bg-color: var(--clr-pink-200);
   padding: 1rem 4.125rem;
 }
 
-/* Call to action */
-.cta .form {
-  margin-top: 2rem;
+/* Form */
+.form {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
+
 .form__input {
-  padding: 1rem;
+  width: 100%;
+  padding: 1rem 2rem;
   border-radius: 2rem;
   border: none;
-  background-color: var(--clr-white-100);
   margin-bottom: 1rem;
 }
 
+.form .btn {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
-  .cta .form {
+  .form {
     position: relative;
-    max-width: 450px;
-    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 445px;
+    margin: 0 auto;
   }
 
-  .form__input {
-    width: 450px;
-    margin-bottom: 0;
-  }
-
-  .form__btn {
+  .form .btn {
     position: absolute;
     top: 0;
     right: 0;
+    padding-left: 1.625rem;
+    padding-right: 1.625rem;
+    width: initial;
   }
 }
-@media (min-width: 1024px) {
-  .cta .split {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .cta .form {
-    margin: 0;
-  }
-}
+
+/* Call to action */
 
 /* Footer */
 .footer {
@@ -374,6 +375,26 @@ a {
     height: 110%;
     top: -25%;
     right: -90%;
+  }
+
+  .home-intro .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .home-intro img {
+    width: 263px;
+  }
+
+  .home-intro .heading__primary {
+    width: 550px;
+  }
+
+  .home-intro .form {
+    margin-left: 0;
   }
 }
 
